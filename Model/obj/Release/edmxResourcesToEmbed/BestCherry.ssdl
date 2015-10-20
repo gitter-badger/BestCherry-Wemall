@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BestCherryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BestCherryModelStoreContainer">
+    <EntitySet Name="Activity" EntityType="BestCherryModel.Store.Activity" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ActivityPro" EntityType="BestCherryModel.Store.ActivityPro" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BestCherryInfo" EntityType="BestCherryModel.Store.BestCherryInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderInfo" EntityType="BestCherryModel.Store.OrderInfo" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+    <Property Name="TYPE" Type="int" />
+    <Property Name="CODE" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ActivityPro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ACTIVITYID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PROCODE" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PROID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BUYTIME" Type="varchar" MaxLength="100" />
+    <Property Name="NUM" Type="int" />
+    <Property Name="IMAGEPATH" Type="varchar" MaxLength="1000" />
+    <Property Name="DESIMGPATH" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="BestCherryInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="TITLE" Type="varchar" MaxLength="1000" />
+    <Property Name="COLOR" Type="varchar" MaxLength="1000" />
+    <Property Name="PRICE" Type="int" />
+    <Property Name="MEMBERPRICE" Type="int" />
+    <Property Name="IMAGEPATH" Type="varchar" MaxLength="1000" />
+    <Property Name="SMALLTITLE" Type="varchar" MaxLength="1000" />
+    <Property Name="CODE" Type="varchar" MaxLength="1000" />
+    <Property Name="DES" Type="text" />
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="POLL" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="CONSIGNEE" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="MEMBERNUM" Type="varchar" MaxLength="1000" />
+    <Property Name="MOBILE" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="RECEIVER_STATE" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="RECEIVER_CITY" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="RECEIVER_DISTRICT" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="ADDRESS" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="ORDERID" Type="varchar" MaxLength="1000" />
+    <Property Name="ORDERLIST" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="PAYDATE" Type="varchar" MaxLength="1000" />
+    <Property Name="USERNUM" Type="varchar" MaxLength="1000" />
+    <Property Name="AMOUNT" Type="int" />
+    <Property Name="INTERFACE" Type="bit" />
+    <Property Name="ALLPRICE" Type="int" />
+    <Property Name="INTERSUCCES" Type="bit" />
+    <Property Name="YINLIANORDERID" Type="varchar" MaxLength="1000" />
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SENDORDERTIME" Type="datetime" />
+    <Property Name="ACTIVITYID" Type="uniqueidentifier" />
+    <Property Name="TYPE" Type="int" />
+    <Property Name="ISHISTORY" Type="bit" />
+    <Property Name="REMARK" Type="varchar" MaxLength="1000" />
+    <Property Name="LOGISTICS" Type="varchar" MaxLength="1000" />
+  </EntityType>
+</Schema>

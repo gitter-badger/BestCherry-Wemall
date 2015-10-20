@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BestCherryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="BestCherryModelStoreContainer">
+          <EntitySet Name="Activity" EntityType="BestCherryModel.Store.Activity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ActivityPro" EntityType="BestCherryModel.Store.ActivityPro" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BestCherryInfo" EntityType="BestCherryModel.Store.BestCherryInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrderInfo" EntityType="BestCherryModel.Store.OrderInfo" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Activity">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="100" />
+          <Property Name="TYPE" Type="int" />
+          <Property Name="CODE" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ActivityPro">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ACTIVITYID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PROCODE" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="PROID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BUYTIME" Type="varchar" MaxLength="100" />
+          <Property Name="NUM" Type="int" />
+          <Property Name="IMAGEPATH" Type="varchar" MaxLength="1000" />
+          <Property Name="DESIMGPATH" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="BestCherryInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="TITLE" Type="varchar" MaxLength="1000" />
+          <Property Name="COLOR" Type="varchar" MaxLength="1000" />
+          <Property Name="PRICE" Type="int" />
+          <Property Name="MEMBERPRICE" Type="int" />
+          <Property Name="IMAGEPATH" Type="varchar" MaxLength="1000" />
+          <Property Name="SMALLTITLE" Type="varchar" MaxLength="1000" />
+          <Property Name="CODE" Type="varchar" MaxLength="1000" />
+          <Property Name="DES" Type="text" />
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="POLL" Type="int" />
+        </EntityType>
+        <EntityType Name="OrderInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="CONSIGNEE" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="MEMBERNUM" Type="varchar" MaxLength="1000" />
+          <Property Name="MOBILE" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="RECEIVER_STATE" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="RECEIVER_CITY" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="RECEIVER_DISTRICT" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="ADDRESS" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="ORDERID" Type="varchar" MaxLength="1000" />
+          <Property Name="ORDERLIST" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="PAYDATE" Type="varchar" MaxLength="1000" />
+          <Property Name="USERNUM" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT" Type="int" />
+          <Property Name="INTERFACE" Type="bit" />
+          <Property Name="ALLPRICE" Type="int" />
+          <Property Name="INTERSUCCES" Type="bit" />
+          <Property Name="YINLIANORDERID" Type="varchar" MaxLength="1000" />
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SENDORDERTIME" Type="datetime" />
+          <Property Name="ACTIVITYID" Type="uniqueidentifier" />
+          <Property Name="TYPE" Type="int" />
+          <Property Name="ISHISTORY" Type="bit" />
+          <Property Name="REMARK" Type="varchar" MaxLength="1000" />
+          <Property Name="LOGISTICS" Type="varchar" MaxLength="1000" />
+          <Property Name="ISPRINTED" Type="bit" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BestCherryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BestCherryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="OrderInfoes" EntityType="BestCherryModel.OrderInfo" />
+          <EntitySet Name="Activities" EntityType="BestCherryModel.Activity" />
+          <EntitySet Name="ActivityProes" EntityType="BestCherryModel.ActivityPro" />
+          <EntitySet Name="BestCherryInfoes" EntityType="BestCherryModel.BestCherryInfo" />
+        </EntityContainer>
+        <EntityType Name="OrderInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="CONSIGNEE" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MEMBERNUM" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MOBILE" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RECEIVER_STATE" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RECEIVER_CITY" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RECEIVER_DISTRICT" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADDRESS" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ORDERID" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ORDERLIST" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAYDATE" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="USERNUM" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="AMOUNT" />
+          <Property Type="Boolean" Name="INTERFACE" />
+          <Property Type="Int32" Name="ALLPRICE" />
+          <Property Type="Boolean" Name="INTERSUCCES" />
+          <Property Type="String" Name="YINLIANORDERID" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SENDORDERTIME" Precision="3" />
+          <Property Type="Int32" Name="TYPE" />
+          <Property Type="Guid" Name="ACTIVITYID" />
+          <Property Type="Boolean" Name="ISHISTORY" />
+          <Property Type="String" Name="REMARK" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGISTICS" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="ISPRINTED" />
+        </EntityType>
+        <EntityType Name="Activity">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TYPE" />
+          <Property Type="String" Name="CODE" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ActivityPro">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="Guid" Name="ACTIVITYID" Nullable="false" />
+          <Property Type="String" Name="PROCODE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="PROID" Nullable="false" />
+          <Property Type="String" Name="BUYTIME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NUM" />
+          <Property Type="String" Name="IMAGEPATH" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DESIMGPATH" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BestCherryInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="TITLE" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COLOR" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PRICE" />
+          <Property Type="Int32" Name="MEMBERPRICE" />
+          <Property Type="String" Name="IMAGEPATH" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SMALLTITLE" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CODE" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DES" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="POLL" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BestCherryModelStoreContainer" CdmEntityContainer="BestCherryEntities">
+          <EntitySetMapping Name="OrderInfoes">
+            <EntityTypeMapping TypeName="BestCherryModel.OrderInfo">
+              <MappingFragment StoreEntitySet="OrderInfo">
+                <ScalarProperty Name="ISPRINTED" ColumnName="ISPRINTED" />
+                <ScalarProperty Name="LOGISTICS" ColumnName="LOGISTICS" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="ISHISTORY" ColumnName="ISHISTORY" />
+                <ScalarProperty Name="INTERSUCCES" ColumnName="INTERSUCCES" />
+                <ScalarProperty Name="ACTIVITYID" ColumnName="ACTIVITYID" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="SENDORDERTIME" ColumnName="SENDORDERTIME" />
+                <ScalarProperty Name="YINLIANORDERID" ColumnName="YINLIANORDERID" />
+                <ScalarProperty Name="ALLPRICE" ColumnName="ALLPRICE" />
+                <ScalarProperty Name="INTERFACE" ColumnName="INTERFACE" />
+                <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+                <ScalarProperty Name="USERNUM" ColumnName="USERNUM" />
+                <ScalarProperty Name="PAYDATE" ColumnName="PAYDATE" />
+                <ScalarProperty Name="ORDERLIST" ColumnName="ORDERLIST" />
+                <ScalarProperty Name="ORDERID" ColumnName="ORDERID" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="RECEIVER_DISTRICT" ColumnName="RECEIVER_DISTRICT" />
+                <ScalarProperty Name="RECEIVER_CITY" ColumnName="RECEIVER_CITY" />
+                <ScalarProperty Name="RECEIVER_STATE" ColumnName="RECEIVER_STATE" />
+                <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+                <ScalarProperty Name="MEMBERNUM" ColumnName="MEMBERNUM" />
+                <ScalarProperty Name="CONSIGNEE" ColumnName="CONSIGNEE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activities">
+            <EntityTypeMapping TypeName="BestCherryModel.Activity">
+              <MappingFragment StoreEntitySet="Activity">
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ActivityProes">
+            <EntityTypeMapping TypeName="BestCherryModel.ActivityPro">
+              <MappingFragment StoreEntitySet="ActivityPro">
+                <ScalarProperty Name="DESIMGPATH" ColumnName="DESIMGPATH" />
+                <ScalarProperty Name="IMAGEPATH" ColumnName="IMAGEPATH" />
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="BUYTIME" ColumnName="BUYTIME" />
+                <ScalarProperty Name="PROID" ColumnName="PROID" />
+                <ScalarProperty Name="PROCODE" ColumnName="PROCODE" />
+                <ScalarProperty Name="ACTIVITYID" ColumnName="ACTIVITYID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BestCherryInfoes">
+            <EntityTypeMapping TypeName="BestCherryModel.BestCherryInfo">
+              <MappingFragment StoreEntitySet="BestCherryInfo">
+                <ScalarProperty Name="POLL" ColumnName="POLL" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DES" ColumnName="DES" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="SMALLTITLE" ColumnName="SMALLTITLE" />
+                <ScalarProperty Name="IMAGEPATH" ColumnName="IMAGEPATH" />
+                <ScalarProperty Name="MEMBERPRICE" ColumnName="MEMBERPRICE" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

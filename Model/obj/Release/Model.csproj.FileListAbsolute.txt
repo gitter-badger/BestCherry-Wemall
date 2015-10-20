@@ -1,0 +1,10 @@
+D:\Project\BestCherry\Model\bin\Release\Model.dll.config
+D:\Project\BestCherry\Model\bin\Release\Model.dll
+D:\Project\BestCherry\Model\bin\Release\Model.pdb
+D:\Project\BestCherry\Model\bin\Release\EntityFramework.dll
+D:\Project\BestCherry\Model\bin\Release\EntityFramework.SqlServer.dll
+D:\Project\BestCherry\Model\bin\Release\EntityFramework.xml
+D:\Project\BestCherry\Model\bin\Release\EntityFramework.SqlServer.xml
+D:\Project\BestCherry\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\Project\BestCherry\Model\obj\Release\Model.dll
+D:\Project\BestCherry\Model\obj\Release\Model.pdb

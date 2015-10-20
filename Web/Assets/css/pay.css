@@ -1,0 +1,20 @@
+﻿  input {
+            border: 1px #ddd solid;
+            border-radius: 5px;
+            height: 2.5em;
+            padding: 0 5px;
+            background: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        b {
+            color: #D90008;
+        }
+
+        ul {
+            margin: 10px;
+            line-height: 2em;
+            list-style: none;
+        }

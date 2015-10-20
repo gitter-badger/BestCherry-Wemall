@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{315A0564-A231-4833-9A63-4390D2F464E4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\css\admin.css" />
+    <Content Include="Assets\css\amazeui.css" />
+    <Content Include="Assets\css\amazeui.flat.css" />
+    <Content Include="Assets\css\amazeui.flat.min.css" />
+    <Content Include="Assets\css\amazeui.min.css" />
+    <Content Include="Assets\css\app.css" />
+    <Content Include="Assets\css\buy.css" />
+    <Content Include="Assets\css\index.css" />
+    <Content Include="Assets\css\pay.css" />
+    <Content Include="Assets\css\profile.css" />
+    <Content Include="Assets\css\sale.css" />
+    <Content Include="Assets\css\sale1style.css" />
+    <Content Include="Assets\css\sale2style.css" />
+    <Content Include="Assets\css\tablesaw.css" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\img\404.jpg" />
+    <Content Include="Assets\img\getheadimg.jpg" />
+    <Content Include="Assets\js\amazeui.ie8polyfill.js" />
+    <Content Include="Assets\js\amazeui.ie8polyfill.min.js" />
+    <Content Include="Assets\js\amazeui.js" />
+    <Content Include="Assets\js\amazeui.min.js" />
+    <Content Include="Assets\js\amazeui.widgets.helper.js" />
+    <Content Include="Assets\js\amazeui.widgets.helper.min.js" />
+    <Content Include="Assets\js\app.js" />
+    <Content Include="Assets\js\buy.js" />
+    <Content Include="Assets\js\echo.min.js" />
+    <Content Include="Assets\js\handlebars.min.js" />
+    <Content Include="Assets\css\introduce.css" />
+    <Content Include="Assets\js\jquery.min.js" />
+    <Content Include="Assets\css\parallax.css" />
+    <Content Include="Assets\js\parallax.js" />
+    <Content Include="Assets\js\pay.js" />
+    <Content Include="Assets\js\sale.js" />
+    <Content Include="Assets\js\tablesaw.js" />
+    <Content Include="Assets\js\zepto.min.js" />
+    <Content Include="Show\buy.aspx" />
+    <Content Include="Show\index.aspx" />
+    <Content Include="Show\introduce.aspx" />
+    <Content Include="Show\mobileICBCReutrn.aspx" />
+    <Content Include="Show\nofound.aspx" />
+    <Content Include="Show\oldpay.aspx" />
+    <Content Include="Show\orderlist.aspx" />
+    <Content Include="Show\pay.aspx" />
+    <Content Include="Show\profile.aspx" />
+    <Content Include="Show\querylogistics.aspx" />
+    <Content Include="Show\sale.aspx" />
+    <Content Include="UNIONMethod\AcpDeal.aspx" />
+    <Content Include="UNIONMethod\AcpQueryDeal.aspx" />
+    <Content Include="UNIONMethod\AppPay.aspx" />
+    <Content Include="UNIONMethod\AuthDeal.aspx" />
+    <Content Include="UNIONMethod\AuthFinish.aspx" />
+    <Content Include="UNIONMethod\AuthUndo.aspx" />
+    <Content Include="UNIONMethod\AutnFinishUndo.aspx" />
+    <Content Include="UNIONMethod\BackPay.aspx" />
+    <Content Include="UNIONMethod\BindingQuery.aspx" />
+    <Content Include="UNIONMethod\Consume.aspx" />
+    <Content Include="UNIONMethod\ConsumeUndo.aspx" />
+    <Content Include="UNIONMethod\CreateBinding.aspx" />
+    <Content Include="UNIONMethod\FileTransfer.aspx" />
+    <Content Include="UNIONMethod\FrontPay.aspx" />
+    <Content Include="UNIONMethod\FrontRcvResponse.aspx" />
+    <Content Include="UNIONMethod\Purchase.aspx" />
+    <Content Include="UNIONMethod\QueryOpenStatus.aspx" />
+    <Content Include="UNIONMethod\RemoveBinding.aspx" />
+    <Content Include="UNIONMethod\SendSMS.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\checkmobilelist.ashx.cs">
+      <DependentUpon>checkmobilelist.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Api\checknum.ashx.cs">
+      <DependentUpon>checknum.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Api\checktime.ashx.cs">
+      <DependentUpon>checktime.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Api\getSMS.ashx.cs">
+      <DependentUpon>getSMS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Api\openUNION.ashx.cs">
+      <DependentUpon>openUNION.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Api\poll.ashx.cs">
+      <DependentUpon>poll.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\orderlist.aspx.cs">
+      <DependentUpon>orderlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\orderlist.aspx.designer.cs">
+      <DependentUpon>orderlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\pay.aspx.cs">
+      <DependentUpon>pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\pay.aspx.designer.cs">
+      <DependentUpon>pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONCom\unionpay\acp\sdk\BigNum.cs" />
+    <Compile Include="UNIONCom\unionpay\acp\sdk\CertUtil.cs" />
+    <Compile Include="UNIONCom\unionpay\acp\sdk\DemoUtil.cs" />
+    <Compile Include="UNIONCom\unionpay\acp\sdk\HttpClient.cs" />
+    <Compile Include="UNIONCom\unionpay\acp\sdk\SDKConfig.cs" />
+    <Compile Include="UNIONCom\unionpay\acp\sdk\SDKConstants.cs" />
+    <Compile Include="UNIONCom\unionpay\acp\sdk\SDKUtil.cs" />
+    <Compile Include="UNIONCom\unionpay\acp\sdk\SecurityUtil.cs" />
+    <Compile Include="ICBCMethod\ICBC.cs" />
+    <Compile Include="ICBCMethod\MobileICBC.cs" />
+    <Compile Include="Master\Web.Master.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Web.Master.designer.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Show\buy.aspx.cs">
+      <DependentUpon>buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\buy.aspx.designer.cs">
+      <DependentUpon>buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\CBCPayOnline.cs" />
+    <Compile Include="Show\introduce.aspx.cs">
+      <DependentUpon>introduce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\introduce.aspx.designer.cs">
+      <DependentUpon>introduce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\mobileICBCReutrn.aspx.cs">
+      <DependentUpon>mobileICBCReutrn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\mobileICBCReutrn.aspx.designer.cs">
+      <DependentUpon>mobileICBCReutrn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\nofound.aspx.cs">
+      <DependentUpon>nofound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\nofound.aspx.designer.cs">
+      <DependentUpon>nofound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\oldpay.aspx.cs">
+      <DependentUpon>oldpay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\oldpay.aspx.designer.cs">
+      <DependentUpon>oldpay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\querylogistics.aspx.cs">
+      <DependentUpon>querylogistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\querylogistics.aspx.designer.cs">
+      <DependentUpon>querylogistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\sale.aspx.cs">
+      <DependentUpon>sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\sale.aspx.designer.cs">
+      <DependentUpon>sale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\AcpDeal.aspx.cs">
+      <DependentUpon>AcpDeal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\AcpDeal.aspx.designer.cs">
+      <DependentUpon>AcpDeal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\AcpQueryDeal.aspx.cs">
+      <DependentUpon>AcpQueryDeal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\AcpQueryDeal.aspx.designer.cs">
+      <DependentUpon>AcpQueryDeal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\AppPay.aspx.cs">
+      <DependentUpon>AppPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\AppPay.aspx.designer.cs">
+      <DependentUpon>AppPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\AuthDeal.aspx.cs">
+      <DependentUpon>AuthDeal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\AuthDeal.aspx.designer.cs">
+      <DependentUpon>AuthDeal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\AuthFinish.aspx.cs">
+      <DependentUpon>AuthFinish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\AuthFinish.aspx.designer.cs">
+      <DependentUpon>AuthFinish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\AuthUndo.aspx.cs">
+      <DependentUpon>AuthUndo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\AuthUndo.aspx.designer.cs">
+      <DependentUpon>AuthUndo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\AutnFinishUndo.aspx.cs">
+      <DependentUpon>AutnFinishUndo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\AutnFinishUndo.aspx.designer.cs">
+      <DependentUpon>AutnFinishUndo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\BackPay.aspx.cs">
+      <DependentUpon>BackPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\BackPay.aspx.designer.cs">
+      <DependentUpon>BackPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\BindingQuery.aspx.cs">
+      <DependentUpon>BindingQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\BindingQuery.aspx.designer.cs">
+      <DependentUpon>BindingQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\Consume.aspx.cs">
+      <DependentUpon>Consume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\Consume.aspx.designer.cs">
+      <DependentUpon>Consume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\ConsumeUndo.aspx.cs">
+      <DependentUpon>ConsumeUndo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\ConsumeUndo.aspx.designer.cs">
+      <DependentUpon>ConsumeUndo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\CreateBinding.aspx.cs">
+      <DependentUpon>CreateBinding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\CreateBinding.aspx.designer.cs">
+      <DependentUpon>CreateBinding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\FileTransfer.aspx.cs">
+      <DependentUpon>FileTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\FileTransfer.aspx.designer.cs">
+      <DependentUpon>FileTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\FrontPay.aspx.cs">
+      <DependentUpon>FrontPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\FrontPay.aspx.designer.cs">
+      <DependentUpon>FrontPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\FrontRcvResponse.aspx.cs">
+      <DependentUpon>FrontRcvResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\FrontRcvResponse.aspx.designer.cs">
+      <DependentUpon>FrontRcvResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\Purchase.aspx.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\Purchase.aspx.designer.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\QueryOpenStatus.aspx.cs">
+      <DependentUpon>QueryOpenStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\QueryOpenStatus.aspx.designer.cs">
+      <DependentUpon>QueryOpenStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\RemoveBinding.aspx.cs">
+      <DependentUpon>RemoveBinding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\RemoveBinding.aspx.designer.cs">
+      <DependentUpon>RemoveBinding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UNIONMethod\SendSMS.aspx.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UNIONMethod\SendSMS.aspx.designer.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Api\checkmobilelist.ashx" />
+    <Content Include="Api\checknum.ashx" />
+    <Content Include="Api\checktime.ashx" />
+    <Content Include="Api\poll.ashx" />
+    <Content Include="Master\Web.Master" />
+    <Content Include="Api\openUNION.ashx" />
+    <Content Include="Api\getSMS.ashx" />
+    <None Include="Properties\PublishProfiles\BestCherryWeb.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{b1f80727-91fe-4bd9-be58-a827d1627aee}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{bcf49088-be11-4035-b457-9e3ce01315c3}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ICBCEBANKUTILLib">
+      <Guid>{281D8524-9378-46CD-ABC3-532BB5370141}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59308</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52800/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BestCherryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BestCherryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="OrderInfoes" EntityType="BestCherryModel.OrderInfo" />
+    <EntitySet Name="Activities" EntityType="BestCherryModel.Activity" />
+    <EntitySet Name="ActivityProes" EntityType="BestCherryModel.ActivityPro" />
+    <EntitySet Name="BestCherryInfoes" EntityType="BestCherryModel.BestCherryInfo" />
+  </EntityContainer>
+  <EntityType Name="OrderInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CONSIGNEE" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MEMBERNUM" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MOBILE" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RECEIVER_STATE" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RECEIVER_CITY" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RECEIVER_DISTRICT" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADDRESS" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ORDERID" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ORDERLIST" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAYDATE" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="USERNUM" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="AMOUNT" />
+    <Property Type="Boolean" Name="INTERFACE" />
+    <Property Type="Int32" Name="ALLPRICE" />
+    <Property Type="Boolean" Name="INTERSUCCES" />
+    <Property Type="String" Name="YINLIANORDERID" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SENDORDERTIME" Precision="3" />
+    <Property Type="Int32" Name="TYPE" />
+    <Property Type="Guid" Name="ACTIVITYID" />
+    <Property Type="Boolean" Name="ISHISTORY" />
+    <Property Type="String" Name="REMARK" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOGISTICS" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ISPRINTED" />
+  </EntityType>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TYPE" />
+    <Property Type="String" Name="CODE" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ActivityPro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="ACTIVITYID" Nullable="false" />
+    <Property Type="String" Name="PROCODE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="PROID" Nullable="false" />
+    <Property Type="String" Name="BUYTIME" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUM" />
+    <Property Type="String" Name="IMAGEPATH" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESIMGPATH" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BestCherryInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="TITLE" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COLOR" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PRICE" />
+    <Property Type="Int32" Name="MEMBERPRICE" />
+    <Property Type="String" Name="IMAGEPATH" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SMALLTITLE" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CODE" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DES" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="POLL" />
+  </EntityType>
+</Schema>

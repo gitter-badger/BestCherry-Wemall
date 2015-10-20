@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A091C8AF-7CF7-4785-819A-529FCE1D12D9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Admin</RootNamespace>
+    <AssemblyName>Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\css\admin.css" />
+    <Content Include="Assets\css\amazeui.css" />
+    <Content Include="Assets\css\amazeui.flat.css" />
+    <Content Include="Assets\css\amazeui.flat.min.css" />
+    <Content Include="Assets\css\amazeui.min.css" />
+    <Content Include="Assets\css\app.css" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\js\amazeui.ie8polyfill.js" />
+    <Content Include="Assets\js\amazeui.ie8polyfill.min.js" />
+    <Content Include="Assets\js\amazeui.js" />
+    <Content Include="Assets\js\amazeui.min.js" />
+    <Content Include="Assets\js\amazeui.widgets.helper.js" />
+    <Content Include="Assets\js\amazeui.widgets.helper.min.js" />
+    <Content Include="Assets\js\app.js" />
+    <Content Include="Assets\js\echo.min.js" />
+    <Content Include="Assets\js\handlebars.min.js" />
+    <Content Include="Assets\js\jquery.min.js" />
+    <Content Include="Assets\js\LodopFuncs.js" />
+    <Content Include="Customer\SearchProduct.ascx" />
+    <Content Include="Images\printer.jpg" />
+    <Content Include="Show\ConnectEdit.aspx" />
+    <Content Include="Show\ConnectPro.aspx" />
+    <Content Include="Show\CreateActivity.aspx" />
+    <Content Include="Show\HavePay.aspx" />
+    <Content Include="Show\Index.aspx" />
+    <Content Include="Show\install_lodop32.exe" />
+    <Content Include="Show\install_lodop64.exe" />
+    <Content Include="Show\NormalAdd.aspx" />
+    <Content Include="Show\NormalPro.aspx" />
+    <Content Include="Show\NotPay.aspx" />
+    <Content Include="Show\Printer.aspx" />
+    <Content Include="Show\ProductAdd.aspx" />
+    <Content Include="Show\ProductEdit.aspx" />
+    <Content Include="Show\ProductList.aspx" />
+    <Content Include="Show\TimeAdd.aspx" />
+    <Content Include="Show\TimeBuy.aspx" />
+    <Content Include="Show\TimeEdit.aspx" />
+    <Content Include="Show\NormalEdit.aspx" />
+    <Content Include="Show\PollAdd.aspx" />
+    <Content Include="Show\PollEdit.aspx" />
+    <Content Include="Show\Poll.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\SearchProduct.ascx.cs">
+      <DependentUpon>SearchProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\SearchProduct.ascx.designer.cs">
+      <DependentUpon>SearchProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AddLogistics.ashx.cs">
+      <DependentUpon>AddLogistics.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AddPro.ashx.cs">
+      <DependentUpon>AddPro.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\ConnectEdit.aspx.cs">
+      <DependentUpon>ConnectEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\ConnectEdit.aspx.designer.cs">
+      <DependentUpon>ConnectEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\ConnectPro.aspx.cs">
+      <DependentUpon>ConnectPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\ConnectPro.aspx.designer.cs">
+      <DependentUpon>ConnectPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\CreateActivity.aspx.cs">
+      <DependentUpon>CreateActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\CreateActivity.aspx.designer.cs">
+      <DependentUpon>CreateActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\HavePay.aspx.cs">
+      <DependentUpon>HavePay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\HavePay.aspx.designer.cs">
+      <DependentUpon>HavePay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\NormalAdd.aspx.cs">
+      <DependentUpon>NormalAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\NormalAdd.aspx.designer.cs">
+      <DependentUpon>NormalAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\NormalPro.aspx.cs">
+      <DependentUpon>NormalPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\NormalPro.aspx.designer.cs">
+      <DependentUpon>NormalPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\NotPay.aspx.cs">
+      <DependentUpon>NotPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\NotPay.aspx.designer.cs">
+      <DependentUpon>NotPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\Printer.aspx.cs">
+      <DependentUpon>Printer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\Printer.aspx.designer.cs">
+      <DependentUpon>Printer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\ProductAdd.aspx.cs">
+      <DependentUpon>ProductAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\ProductAdd.aspx.designer.cs">
+      <DependentUpon>ProductAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\ProductEdit.aspx.cs">
+      <DependentUpon>ProductEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\ProductEdit.aspx.designer.cs">
+      <DependentUpon>ProductEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\TimeAdd.aspx.cs">
+      <DependentUpon>TimeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\TimeAdd.aspx.designer.cs">
+      <DependentUpon>TimeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\TimeBuy.aspx.cs">
+      <DependentUpon>TimeBuy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\TimeBuy.aspx.designer.cs">
+      <DependentUpon>TimeBuy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\TimeEdit.aspx.cs">
+      <DependentUpon>TimeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\TimeEdit.aspx.designer.cs">
+      <DependentUpon>TimeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\NormalEdit.aspx.cs">
+      <DependentUpon>NormalEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\NormalEdit.aspx.designer.cs">
+      <DependentUpon>NormalEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\PollAdd.aspx.cs">
+      <DependentUpon>PollAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\PollAdd.aspx.designer.cs">
+      <DependentUpon>PollAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\PollEdit.aspx.cs">
+      <DependentUpon>PollEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\PollEdit.aspx.designer.cs">
+      <DependentUpon>PollEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\Poll.aspx.cs">
+      <DependentUpon>Poll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Show\Poll.aspx.designer.cs">
+      <DependentUpon>Poll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Show\UploadFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Master\Admin.Master" />
+    <Content Include="Services\AddPro.ashx" />
+    <None Include="Properties\PublishProfiles\BestCherryAdmin.pubxml" />
+    <Content Include="Services\AddLogistics.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{b1f80727-91fe-4bd9-be58-a827d1627aee}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{bcf49088-be11-4035-b457-9e3ce01315c3}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52896/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

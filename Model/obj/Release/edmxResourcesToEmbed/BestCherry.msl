@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BestCherryModelStoreContainer" CdmEntityContainer="BestCherryEntities">
+    <EntitySetMapping Name="OrderInfoes">
+      <EntityTypeMapping TypeName="BestCherryModel.OrderInfo">
+        <MappingFragment StoreEntitySet="OrderInfo">
+          <ScalarProperty Name="LOGISTICS" ColumnName="LOGISTICS" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="ISHISTORY" ColumnName="ISHISTORY" />
+          <ScalarProperty Name="INTERSUCCES" ColumnName="INTERSUCCES" />
+          <ScalarProperty Name="ACTIVITYID" ColumnName="ACTIVITYID" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="SENDORDERTIME" ColumnName="SENDORDERTIME" />
+          <ScalarProperty Name="YINLIANORDERID" ColumnName="YINLIANORDERID" />
+          <ScalarProperty Name="ALLPRICE" ColumnName="ALLPRICE" />
+          <ScalarProperty Name="INTERFACE" ColumnName="INTERFACE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="USERNUM" ColumnName="USERNUM" />
+          <ScalarProperty Name="PAYDATE" ColumnName="PAYDATE" />
+          <ScalarProperty Name="ORDERLIST" ColumnName="ORDERLIST" />
+          <ScalarProperty Name="ORDERID" ColumnName="ORDERID" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="RECEIVER_DISTRICT" ColumnName="RECEIVER_DISTRICT" />
+          <ScalarProperty Name="RECEIVER_CITY" ColumnName="RECEIVER_CITY" />
+          <ScalarProperty Name="RECEIVER_STATE" ColumnName="RECEIVER_STATE" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="MEMBERNUM" ColumnName="MEMBERNUM" />
+          <ScalarProperty Name="CONSIGNEE" ColumnName="CONSIGNEE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activities">
+      <EntityTypeMapping TypeName="BestCherryModel.Activity">
+        <MappingFragment StoreEntitySet="Activity">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActivityProes">
+      <EntityTypeMapping TypeName="BestCherryModel.ActivityPro">
+        <MappingFragment StoreEntitySet="ActivityPro">
+          <ScalarProperty Name="DESIMGPATH" ColumnName="DESIMGPATH" />
+          <ScalarProperty Name="IMAGEPATH" ColumnName="IMAGEPATH" />
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="BUYTIME" ColumnName="BUYTIME" />
+          <ScalarProperty Name="PROID" ColumnName="PROID" />
+          <ScalarProperty Name="PROCODE" ColumnName="PROCODE" />
+          <ScalarProperty Name="ACTIVITYID" ColumnName="ACTIVITYID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BestCherryInfoes">
+      <EntityTypeMapping TypeName="BestCherryModel.BestCherryInfo">
+        <MappingFragment StoreEntitySet="BestCherryInfo">
+          <ScalarProperty Name="POLL" ColumnName="POLL" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DES" ColumnName="DES" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="SMALLTITLE" ColumnName="SMALLTITLE" />
+          <ScalarProperty Name="IMAGEPATH" ColumnName="IMAGEPATH" />
+          <ScalarProperty Name="MEMBERPRICE" ColumnName="MEMBERPRICE" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,19 @@
+﻿.hiddenClass {
+    display: none;
+}
+.sign {
+    text-align: center;
+    background-color: #fff;
+    display: inline-block;
+    line-height: 30px;
+    width: 30px;
+}
+.buynum {
+    border-left: 1px #c5c8cf solid;
+    border-right: 1px #c5c8cf solid;
+    background-color: #fff;
+    width: 28px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+}

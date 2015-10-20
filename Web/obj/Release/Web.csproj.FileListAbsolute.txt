@@ -1,0 +1,15 @@
+D:\Project\BestCherry\Web\bin\Web.dll
+D:\Project\BestCherry\Web\bin\Web.pdb
+D:\Project\BestCherry\Web\bin\BLL.dll
+D:\Project\BestCherry\Web\bin\EntityFramework.dll
+D:\Project\BestCherry\Web\bin\EntityFramework.SqlServer.dll
+D:\Project\BestCherry\Web\bin\Model.dll
+D:\Project\BestCherry\Web\bin\BLL.pdb
+D:\Project\BestCherry\Web\bin\Model.pdb
+D:\Project\BestCherry\Web\bin\EntityFramework.xml
+D:\Project\BestCherry\Web\bin\EntityFramework.SqlServer.xml
+D:\Project\BestCherry\Web\obj\Release\Web.dll
+D:\Project\BestCherry\Web\obj\Release\Web.pdb
+D:\Project\BestCherry\Web\obj\Release\Web.csprojResolveAssemblyReference.cache
+D:\Project\BestCherry\Web\obj\Release\Interop.ICBCEBANKUTILLib.dll
+D:\Project\BestCherry\Web\obj\Release\Web.csproj.ResolveComReference.cache

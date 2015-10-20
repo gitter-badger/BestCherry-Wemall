@@ -1,0 +1,54 @@
+﻿.d_tag {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 20px;
+    line-height: 20px;
+    color: #DD514C;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.d_buy {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.buy {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.d_title {
+    position: absolute;
+    bottom: 32px;
+    left: 0px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-align:left;
+    font-weight: bold;
+    font-size: 16px;
+    width:150px;
+    color: #DD514C;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}

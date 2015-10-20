@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b8c18c9795b94b93b785db1cfa6d61ed" Name="关系图1" ZoomLevel="66">
+        <EntityTypeShape EntityType="BestCherryModel.OrderInfo" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="BestCherryModel.Activity" Width="1.5" PointX="1.4585055846062049" PointY="12.321599399820714" />
+        <EntityTypeShape EntityType="BestCherryModel.ActivityPro" Width="1.5" PointX="5.637337024154764" PointY="22.683938036991254" />
+        <EntityTypeShape EntityType="BestCherryModel.BestCherryInfo" Width="2.75" PointX="12" PointY="6" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

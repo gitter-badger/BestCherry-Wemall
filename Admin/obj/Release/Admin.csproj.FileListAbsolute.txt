@@ -1,0 +1,13 @@
+D:\Project\BestCherry\Admin\bin\Admin.dll
+D:\Project\BestCherry\Admin\bin\Admin.pdb
+D:\Project\BestCherry\Admin\bin\BLL.dll
+D:\Project\BestCherry\Admin\bin\EntityFramework.dll
+D:\Project\BestCherry\Admin\bin\EntityFramework.SqlServer.dll
+D:\Project\BestCherry\Admin\bin\Model.dll
+D:\Project\BestCherry\Admin\bin\BLL.pdb
+D:\Project\BestCherry\Admin\bin\Model.pdb
+D:\Project\BestCherry\Admin\bin\EntityFramework.xml
+D:\Project\BestCherry\Admin\bin\EntityFramework.SqlServer.xml
+D:\Project\BestCherry\Admin\obj\Release\Admin.csprojResolveAssemblyReference.cache
+D:\Project\BestCherry\Admin\obj\Release\Admin.dll
+D:\Project\BestCherry\Admin\obj\Release\Admin.pdb

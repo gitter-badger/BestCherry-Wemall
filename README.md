@@ -1,4 +1,6 @@
 # BestCherry-Wemall
+
+[![Join the chat at https://gitter.im/liyunzhi1993/BestCherry-Wemall](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/liyunzhi1993/BestCherry-Wemall?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 当初是做一个在移动端卖樱桃的小网站而已，慢慢的演变成一个在微信端可复制型的小商场
 由于该项目是公司商业化产品所有不再更新
 
